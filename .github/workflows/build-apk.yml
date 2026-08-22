@@ -1,4 +1,5 @@
 name: Build APK
+
 on:
   push:
     branches: [ main, master ]
@@ -26,7 +27,7 @@ jobs:
           gradle-version: '8.7'
 
       - name: Build debug APK
-        run: gradle assembleDebug
+        run: gradle assembleDebug --info
         working-directory: al-athan-iraq
 
       - name: Upload APK
